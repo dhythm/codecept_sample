@@ -12,16 +12,26 @@
 ```
 
 # Issue
+## Different argument between local and docker
 The test on local can run with
 ```
 Scenario("something", ({ I }) => {
 ```
 (See sample_test.js)
-
 However, The test on docker can run with
 ```
 Scenario("something", (I) => {
 ```
 (See sample_docker_test.js)
-
 Otherwise, both tests will be failed.
+
+## Not working for Japanese if using the default Dockerfile
+Get a Dockerfile from [here](git@github.com:Photosynth-inc/CodeceptJS.git).
+And build it by following,
+```
+docker build --no-cache . -t codeceptjs
+```
+Run the container by using
+```
+docker run --rm --net=host -v $PWD:/tests codeceptjs codeceptjs run ./sample_docker_test.js --steps
+```
