@@ -26,6 +26,7 @@ Scenario("something", (I) => {
 Otherwise, both tests will be failed.
 
 ## Not working for Japanese if using the default Dockerfile
+**Caveat: this process is not working.**
 Get a Dockerfile from [here](git@github.com:Photosynth-inc/CodeceptJS.git).
 And build it by following,
 ```
