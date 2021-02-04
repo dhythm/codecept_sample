@@ -27,12 +27,23 @@ Otherwise, both tests will be failed.
 
 ## Not working for Japanese if using the default Dockerfile
 **Caveat: this process is not working.**
-Get a Dockerfile from [here](git@github.com:Photosynth-inc/CodeceptJS.git).
-And build it by following,
+```
+git clone https://github.com/codeceptjs/CodeceptJS.git
+```
+
+Add the following code into the Dockerfile,
+```
+# Install for Japanese font
+RUN apt-get update
+RUN apt-get install -y fontconfig fonts-noto-cjk && fc-cache -fv
+```
+
+Build a container image.
 ```
 docker build --no-cache . -t codeceptjs
 ```
-Run the container by using
+
+Then, you can run the following script,
 ```
-docker run --rm --net=host -v $PWD:/tests codeceptjs codeceptjs run ./sample_docker_test.js --steps
+npm run test:ci
 ```

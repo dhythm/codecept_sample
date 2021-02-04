@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "npx codeceptjs run ./sample_test.js",
-    "test:ci": "docker run --rm --net=host -v $PWD:/tests codeception/codeceptjs codeceptjs run ./sample_docker_test.js --steps"
+    "test:ci:caveat": "docker run --rm --net=host -v $PWD:/tests codeception/codeceptjs codeceptjs run ./sample_test.js --steps",
+    "test:ci": "docker run --rm --net=host -v $PWD:/tests codeceptjs codeceptjs run ./sample_test.js --steps"
   },
   "keywords": [],
   "author": "",
