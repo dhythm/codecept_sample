@@ -1,0 +1,19 @@
+{
+  "name": "codecept_sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "codeceptjs": "^3.0.4",
+    "nightmare": "^3.0.2",
+    "playwright": "^1.8.0",
+    "puppeteer": "^7.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
