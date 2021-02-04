@@ -12,6 +12,10 @@ exports.config = {
       url: "http://localhost",
       show: true,
       windowSize: "1200x900",
+      waitForNavigation: "networkidle0",
+      chrome: {
+        args: ["--headless", "--no-sandbox"],
+      },
     },
   },
   include: {
@@ -25,14 +29,11 @@ exports.config = {
     retryFailedStep: {
       enabled: true,
     },
-    tryTo: {
-      enabled: true,
-    },
     screenshotOnFail: {
       enabled: true,
     },
     stepByStepReport: {
-      enabled: true,
+      enabled: false,
       deleteSuccessful: false,
       fullPageScreenshots: true,
     },

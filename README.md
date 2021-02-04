@@ -10,3 +10,18 @@
 ? [Puppeteer] Show browser window Yes
 ? [Puppeteer] Browser viewport size 1200x900
 ```
+
+# Issue
+The test on local can run with
+```
+Scenario("something", ({ I }) => {
+```
+(See sample_test.js)
+
+However, The test on docker can run with
+```
+Scenario("something", (I) => {
+```
+(See sample_docker_test.js)
+
+Otherwise, both tests will be failed.
