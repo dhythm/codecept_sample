@@ -12,7 +12,6 @@ exports.config = {
       url: "http://localhost",
       show: true,
       windowSize: "1200x900",
-      waitForNavigation: "networkidle0",
       chrome: {
         args: ["--headless", "--no-sandbox"],
       },
@@ -33,7 +32,7 @@ exports.config = {
       enabled: true,
     },
     stepByStepReport: {
-      enabled: false,
+      enabled: true,
       deleteSuccessful: false,
       fullPageScreenshots: true,
     },
